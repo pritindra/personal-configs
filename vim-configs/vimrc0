@@ -1,0 +1,39 @@
+imap ii <Esc>
+
+syntax on
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
+set smarttab
+
+set autoindent
+
+set number
+
+set showmode
+
+set showmatch
+
+set scrolloff=5
+
+map g2 :call cursor(0, virtcol('$')/4)<CR>
+map gm :call cursor(0, virtcol('$')/2)<CR>
+map g7 :call cursor(0, virtcol('$')/3*2)<CR>
+
+packadd! dracula
+syntax enable
+colorscheme delek
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+
+nnoremap <C-Left> :tabprevious<CR>                                         
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-j> :tabprevious<CR>                                             
+nnoremap <C-k> :tabnext<CR>
