@@ -6,7 +6,7 @@
 
 int main(int argc, char *argv[]) {
     
-    struct flock f1 = {F_RDLCK, SEEK_SET, 0, 0, 0};
+    struct flock f1 = {F_WRLCK, SEEK_SET, 0, 0, 0};
     int fd;
 
     f1.l_pid = getpid();
